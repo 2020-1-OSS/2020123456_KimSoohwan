@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>2020-1 오픈소스 소프트웨어</title>
+    <meta charset="utf-8" />
+    <meta name="date" content="2020-07-01" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 2020-1 오픈소스 소프트웨어
+## Git/GitHub 실습 시험
+### 2020-07-01
+
+---
+
+&lt;style type="text/css" style="display: none"&gt;
+.remark-inline-code {
+  background: #e6e6e6; 
+}
+
+.pre {
+  height: 20pc;
+  overflow-y: scroll;
+}
+&lt;/script&gt;
+---
+# Step 1: 사용자 정보 등록
+
+1. 아래와 같이 Git 사용자 정보를 등록하시오.
+    - 이름: 학번6자리_영어이름 (예: `2020123456_KimSoohwan`)
+    - 이메일: 각자 이메일 주소 (예: `kimsoohwan@sunmoon.ac.kr`)
+1. GitHub ID: 지금부터 GitHub의 Main ID로 작업을 하겠습니다. 
+    - e-강의동 과제 게시판에 제출한 것과 상관 없이, 두 개의 GitHub ID 중에 아무거나 Main ID, Sub ID로 지금 바꿔도 상관없습니다.
+    - 단, 지금 정한 Main ID와 Sub ID를 꼭 기억하시고 일관성 있게 사용해주시기 바랍니다.
+    - SSH Key를 등록하실 분은 GitHub의 Main ID에 SSH Key를 등록해주세요.
+    - SSH Key를 등록하지 않으실 분은 GitHub의 ID/PW를 물을 때마다 매번 Main ID로 로그인해주세요.
+1. 소스코드는 Copy &amp; Paste해서 편하게 사용하세요.
+    - Hightlight된 부분이 이전 파일에서 새롭게 수정된 내용입니다.
+    - 붙여 넣을때 줄 바꿈이 잘 안되면 새롭게 수정된 내용만 붙여 넣으시면 편합니다.
+
+---
+# Step 2: PC에 Git 저장소 만들기
+
+1. `Final-Exam`이라는 디렉터리를 만드시오.
+1. `Final-Exam` 디렉터리로 이동하시오.
+1. `Local-Repo`라는 디렉터리를 만드시오.
+1. `Local-Repo` 디렉터리로 이동하시오.
+1. Git 저장소를 초기화 하시오.
+
+---
+# Step 3: GitHub 저장소 연결
+
+1. GitHub에 접속해서 비어있는 기말고사를 저장소를 확인하시오.
+1. `Local-Repo` 디렉터리의 Git 저장소를 해당 GitHub 저장소와 연결하시오. 
+
+---
+# Step 4: Git 무시조건 만들기
+
+1. 확장자가 `swp`과 `txt`인 파일들을 Git이 추적하지 않도록 하시오.
+1. `log` 디렉터리의 모든 내용을 Git이 추적하지 않도록 하시오.
+
+---
+# Step 5: `profile.txt` 만들기
+
+1. `Local-Repo` 디렉터리에 `profile.txt` 파일을 만드시오.
+1. 아래와 같이 `profile.txt` 파일을 수정하시오.
+
+```markdown
+Name: Hong Gildong (자신의 이름)
+ID: 2020123456 (자신의 학번)
+```
+
+---
+# Step 6: `log` 디렉터리 만들기
+
+1. `Local-Repo` 디렉터리 밑에 `log` 디렉터리를 만드시오.
+1. `log` 디렉터리에 `2020-07-01-01.log` 파일을 만드시오.
+1. 아래와 같이 `2020-07-01-01.log` 파일을 수정하시오.
+
+```markdown
+Initialized the git repository
+```
+
+---
+# Step 7: `README.md` 만들기
+
+1. `Local-Repo` 디렉터리에 `README.md` 파일을 만드시오.
+1. 아래와 같이 보이도록 `README.md` 파일을 수정하시오.
+1. `[master-01] Create the readme file`이라는 Commit을 만드시오.
+
+&lt;/br&gt;&lt;/br&gt;
+![REAME](figs/readme-01.png)
+
+---
+# Step 8: Python 파일 만들기
+
+1. `Local-Repo` 디렉터리에 `rockpaperscissors.py` 파일을 만드시오.
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[master-02] Create the game structure`라는 Commit을 만드시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+computer = "Rock"
+
+# get the user input
+player = "Paper"
+```
+
+---
+# Step 9: 코드 수정하기
+
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[master-03] Display the computer play`라는 Commit을 만드시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+computer = "Rock"
+*print('Computer: {}'.format(computer))
+
+# get the user input
+player = "Paper"
+```
+
+---
+# Step 10: 코드 수정하기
+
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. **새로운 Commit을 만들지 말고 이전 Commit에 덮어쓰시오.** 
+1. Commit 메세지는 `[master-03] Display both plays`라고 하시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+computer = "Rock"
+print('Computer: {}'.format(computer))
+
+# get the user input
+player = "Paper"
+*print('Player: {}'.format(player))
+```
+
+---
+# Step 11: GitHub에 Push하기
+
+1. `master` Branch를 GitHub에 Push하시오.
+
+---
+# Step 12: Branch 만들기
+1. `random-play`이라는 Branch를 만드시오.
+1. `user-input`이라는 Branch를 만드시오.
+
+---
+# Step 13: Branch Merge하기
+
+1. `random-play` Branch로 이동하시오.
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[random-play-01] Set a random play to the computer`라는 메세지로 Commit을 만드시오.
+1. `random-play` Branch를 `master` Branch에 Merge하시오.
+
+```python
+*from random import randint
+
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+*computer = play[randint(0, 2)]
+print('Computer: {}'.format(computer))
+
+# get the user input
+player = "Paper"
+print('Player: {}'.format(player))
+```
+
+---
+# Step 14: 코드 수정하기
+
+1. `user-input` Branch로 이동하시오.
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+computer = "Rock"
+print('Computer: {}'.format(computer))
+
+# get the user input
+*player = input("Rock, Paper, Scissors? ")
+print('Player: {}'.format(player))
+```
+
+---
+# Step 15: `README.md` 수정하기
+
+1. 아래와 같이 보이도록 `README.md` 파일을 수정하시오.
+1. `[user-input-01] Get the user input`이라는 Commit을 만드시오.
+
+&lt;/br&gt;
+&lt;img src="figs/readme-02.png" style="width: 70%" /&gt;
+
+---
+# Step 16: Branch Merge하기
+
+1. `user-input` Branch를 `master` Branch에 Merge하시오.
+1. Merge Commit 메세지는 `[master-04] Set both plays`로 하시오.
+
+
+---
+# Step 17: Commit 메세지 수정하기
+
+1. `[master-04] Display both plays`이라는 Commit의 메세지를 `[master-04] Set a random play and get the user input`이라고 수정하시오.
+
+
+---
+# Step 18: Repo Clone하기
+
+1. `Local-Repo`의 상위 디렉터리인 `Final-Exam` 디렉터리로 이동하시오.
+1. GitHub 저장소를 Clone하시오.
+
+
+---
+# Step 19: 코드 수정하기
+
+1. **GitHub 저장소를 다운받은 디렉터리로 이동하시오.** 
+1. `master` Branch에서 `compare` Branch를 만들고 이동하시오.
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[compare-01] Add the tie condition`이라는 Commit을 만드시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+computer = "Rock"
+print('Computer: {}'.format(computer))
+
+# get the user input
+player = "Paper"
+print('Player: {}'.format(player))
+
+*# tie
+*if player == computer:
+*    print("Tie!")
+```
+
+---
+# Step 20: 코드 수정하기
+
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[compare-02] Add the rock case`이라는 Commit을 만드시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+computer = "Rock"
+print('Computer: {}'.format(computer))
+
+# get the user input
+player = "Paper"
+print('Player: {}'.format(player))
+
+# tie
+if player == computer:
+    print("Tie!")
+```
+
+---
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+```python
+*# rock
+*elif player == "Rock":
+*    if computer == "Scissors":
+*        print("You win!")
+*    else:
+*        print("You lose!")
+```
+
+---
+# Step 21: 코드 수정하기
+
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[compare-03] Add the paper case`이라는 Commit을 만드시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+computer = "Rock"
+print('Computer: {}'.format(computer))
+
+# get the user input
+player = "Paper"
+print('Player: {}'.format(player))
+
+# tie
+if player == computer:
+    print("Tie!")
+```
+
+---
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+```python
+# rock
+elif player == "Rock":
+    if computer == "Scissors":
+        print("You win!")
+    else:
+        print("You lose!")
+
+*# paper
+*elif player == "Paper":
+*    if computer == "Rock":
+*        print("You win!")
+*    else:
+*        print("You lose!")
+```
+
+---
+# Step 22: 코드 수정하기
+
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[compare-04] Add the scissors case`이라는 Commit을 만드시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+# assign a random play to the computer
+computer = "Rock"
+print('Computer: {}'.format(computer))
+
+# get the user input
+player = "Paper"
+print('Player: {}'.format(player))
+
+# tie
+if player == computer:
+    print("Tie!")
+```
+
+---
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+```python
+# rock
+elif player == "Rock":
+    if computer == "Scissors":
+        print("You win!")
+    else:
+        print("You lose!")
+
+# paper
+elif player == "Paper":
+    if computer == "Rock":
+        print("You win!")
+    else:
+        print("You lose!")
+
+*# scissors
+*elif player == "Scissors":
+*    if computer == "Paper":
+*        print("You win!")
+*    else:
+*        print("You lose!")
+```
+
+---
+# Step 23: Commit 합치기
+
+1. `[compare-01]`부터 `[compare-04]`까지의 Commit들을 하나로 합치시오.
+1. Commit 메세지는 `[compare-01] Display the result`로 하시오.
+
+---
+# Step 24: 코드 수정하기
+
+1. `compare` Branch에서 `message` Branch를 만들고 이동하시오.
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[message-01] Add the message list`라는 Commit을 만드시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+*# list of messages
+*messages = ["Tie!", "You win!", "You lose!"]
+
+# assign a random play to the computer
+computer = "Rock"
+print('Computer: {}'.format(computer))
+
+# get the user input
+player = input("Rock, Paper, Scissors? ")
+print('Player: {}'.format(player))
+```
+
+---
+&lt;/br&gt;
+```python
+# tie
+if player == computer:
+*    print(messages[0])
+
+# rock
+elif player == "Rock":
+    if computer == "Scissors":
+*        print(messages[1])
+    else:
+*        print(messages[2])
+
+# paper
+elif player == "Paper":
+    if computer == "Rock":
+*        print(messages[1])
+    else:
+*        print(messages[2])
+
+# scissors
+elif player == "Scissors":
+    if computer == "Paper":
+*        print(messages[1])
+    else:
+*        print(messages[2])
+```
+
+---
+# Step 25: 코드 수정하기
+
+1. `compare` Branch에서 `winning-rule` Branch를 만들고 이동하시오.
+1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
+1. `[winning-rule-01] Add the winning rule`이라는 Commit을 만드시오.
+
+```python
+# list of play options
+play = ["Rock", "Paper", "Scissors"]
+
+*# game rule
+*winning_rule = {"Rock": "Scissors", "Paper": "Rock", 
+*                "Scissors": "Papper"}
+
+# assign a random play to the computer
+computer = "Rock"
+print('Computer: {}'.format(computer))
+
+# get the user input
+player = input("Rock, Paper, Scissors? ")
+print('Player: {}'.format(player))
+```
+
+---
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+```python
+# tie
+if player == computer:
+    print("Tie!")
+
+*# you win
+*elif winning_rule[player] == computer:
+*    print("You win!")
+
+*# you lose
+*else:
+*    print("You lose!")
+```
+
+---
+# Step 26: Branch Merge하기
+
+1. `message` Branch를 `compare` Branch로 Merge하시오.
+1. `winning-rule` Branch를 `compare` Branch로 Merge하시오.
+1. Merge Commit 메세지는 `[compare-02] Add the messages and winning rule`로 하시오.
+
+---
+# Step 27: `README.md` 수정하기
+
+1. 아래와 같이 보이도록 `README.md` 파일을 수정하시오.
+1. 이전 Commit에 메세지를 바꾸지 않고 수정된 내용을 추가하시오.
+
+&lt;img src="figs/readme-03.png" style="width: 40%" /&gt;
+
+---
+# Step 28: Branch 업데이트하기
+
+1. `Final-Exam/Local-Repo` 디렉터리로 이동하시오.
+1. `master` Branch를 포함한 모든 Branch를 GitHub로 Push하시오.
+1. 다시 `Final-Exam/학번_이름` 디렉터리로 이동하시오.
+1. `master` Branch로 이동한 뒤 GitHub의 `master` Branch를 Pull하시오.
+
+---
+# Step 29: Branch Rebase하기
+
+1. `compare` Branch를 `master` Branch에 Rebase하시오.
+
+---
+# Step 30: Pull Request하기
+1. `compare` Branch를 GitHub에 Push하시오.
+1. `compare` Branch를 `master` Branch에 Merge하기 위한 Pull Request를 만드시오.
+1. Pull Request의 Reviewer로 Sub ID를 추가하고 Assignee로 Main ID를 추가하시오.
+1. GitHub Sub ID로 Pull Request를 승인하고 Merge하시오.
+1. Merge 메세지는 `[master-04] Add the message list and winning rule`로 하시오.
+
+---
+# Step 31: Tag 만들기
+1. `master` Branch로 이동하여 GitHub의 `master` Branch를 Pull 하시오.
+1. `single-game`이라는 Tag를 만드시오.
+
+---
+# Step 32: `log`파일 추가하기
+
+1. `log` 디렉터리에 `2020-07-01-03.log` 파일을 만드시오.
+1. 아래와 같이 `2020-07-01-03.log` 파일을 수정하시오.
+
+```markdown
+Completed the single game
+```
+
+---
+# Step 33: GitHub에 Push하기
+
+1. Local PC의 모든 Branch와 Tag를 GitHub로 Push하시오.
+1. `Final-Exam` 디렉터리를 `Final-Exam_학번_영어이름.zip`으로 압축해서 e-강의동 과제 게시판에 제출하시오.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "zenburn",
+"highlightLines": true,
+"highlightSpans": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
