@@ -216,7 +216,7 @@ print('Player: {}'.format(player))
 ---
 # Step 17: Commit 메세지 수정하기
 
-1. `[master-04] Display both plays`이라는 Commit의 메세지를 `[master-04] Set a random play and get the user input`이라고 수정하시오.
+1. `[master-04] Set both plays`이라는 Commit의 메세지를 `[master-04] Set a random play and get the user input`이라고 수정하시오.
 
 
 ---
@@ -229,7 +229,7 @@ print('Player: {}'.format(player))
 ---
 # Step 19: 코드 수정하기
 
-1. **GitHub 저장소를 다운받은 디렉터리로 이동하시오.** 
+1. **GitHub 저장소를 다운받은 `학번_이름` 디렉터리로 이동하시오.** 
 1. `master` Branch에서 `compare` Branch를 만들고 이동하시오.
 1. 아래와 같이 `rockpaperscissors.py` 파일을 수정하고 테스트하시오.
 1. `[compare-01] Add the tie condition`이라는 Commit을 만드시오.
@@ -506,7 +506,7 @@ if player == computer:
 1. `compare` Branch를 `master` Branch에 Merge하기 위한 Pull Request를 만드시오.
 1. Pull Request의 Reviewer로 Sub ID를 추가하고 Assignee로 Main ID를 추가하시오.
 1. GitHub Sub ID로 Pull Request를 승인하고 Merge하시오.
-1. Merge 메세지는 `[master-04] Add the message list and winning rule`로 하시오.
+1. Merge 메세지는 `[master-05] Add the message list and winning rule`로 하시오.
 
 ---
 # Step 31: Tag 만들기
@@ -522,9 +522,6 @@ if player == computer:
 ```markdown
 Completed the single game
 ```
-
----
-# Step 33: GitHub에 Push하기
 
 1. Local PC의 모든 Branch와 Tag를 GitHub로 Push하시오.
 1. `Final-Exam` 디렉터리를 `Final-Exam_학번_영어이름.zip`으로 압축해서 e-강의동 과제 게시판에 제출하시오. 
